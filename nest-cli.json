@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/paliali-back/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/paliali-back/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/paliali-back",
+  "projects": {
+    "api-gateway": {
+      "type": "application",
+      "root": "apps/api-gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/api-gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/api-gateway/tsconfig.app.json"
+      }
+    },
+    "paliali-back": {
+      "type": "application",
+      "root": "apps/paliali-back",
+      "entryFile": "main",
+      "sourceRoot": "apps/paliali-back/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/paliali-back/tsconfig.app.json"
+      }
+    }
+  }
+}
